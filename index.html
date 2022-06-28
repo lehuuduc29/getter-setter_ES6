@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    class Person {
+        constructor(name, stride) {
+            this.name = name;
+            this.stride = stride;
+        }
+        
+        get getName() {
+            console.log(this.name);
+        }
+
+        set setName(val) {
+            this.name = val;
+            console.log(this.name);
+        }
+        walk() {
+            let v = 20; // vận tốc di chuyển
+            console.log(this.stride * v);
+        }
+    }
+
+    class Programmer extends Person {
+        constructor(name, stride, lang) {
+            super(name, stride);
+            this.lang = lang;
+        }
+
+        get getLang(){
+            console.log(this.lang);
+        }
+        set setLang(val) {
+            this.lang = val;
+            console.log(this.lang);
+        }
+        writeCode(){
+            console.log(`${this.lang} la ngon ngu hien tai`);
+        }
+    }
+
+    const js = new Programmer('Nguyen Van A', 4, 'C++');
+    js.getName;
+    js.setName = 'Vu Van Thanh';
+    js.walk();
+    js.getLang;
+    js.setLang = 'JS';
+    js.writeCode();
+</script>
+
+</html>
